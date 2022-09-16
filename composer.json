@@ -1,9 +1,9 @@
 {
-    "name": "semai-intern-team/package-shipper",
+    "name": "jwalbli-team/package-shipper",
     "description": "Package Shipper",
     "type": "library",
     "keywords": ["package", "skeleton"],
-    "homepage": "https://github.com/semai-intern-team/package-shipper",
+    "homepage": "https://github.com/jwalbli-team/package-shipper",
     "license": "MIT",
     "authors": [
         {
@@ -13,11 +13,11 @@
         }
     ],
     "support": {
-        "docs": "https://semai-intern-team.github.io/package-shipper/",
-        "issues": "https://github.com/semai-intern-team/package-shipper/issues",
-        "rss": "https://github.com/semai-intern-team/package-shipper/releases.atom",
-        "source": "https://github.com/semai-intern-team/package-shipper.git",
-        "wiki": "https://github.com/semai-intern-team/package-shipper/wiki"
+        "docs": "https://jwalbli-team.github.io/package-shipper/",
+        "issues": "https://github.com/jwalbli-team/package-shipper/issues",
+        "rss": "https://github.com/jwalbli-team/package-shipper/releases.atom",
+        "source": "https://github.com/jwalbli-team/package-shipper.git",
+        "wiki": "https://github.com/jwalbli-team/package-shipper/wiki"
     },
     "require": {
         "php": "^7.2",
