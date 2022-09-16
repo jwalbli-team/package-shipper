@@ -1,0 +1,75 @@
+{
+    "name": "semai-intern-team/package-shipper",
+    "description": "Package Shipper",
+    "type": "library",
+    "keywords": ["package", "skeleton"],
+    "homepage": "https://github.com/semai-intern-team/package-shipper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Kurniawan",
+            "email": "jatinangorservice@gmail.com",
+            "homepage": "https://www.semai.co.id"
+        }
+    ],
+    "support": {
+        "docs": "https://semai-intern-team.github.io/package-shipper/",
+        "issues": "https://github.com/semai-intern-team/package-shipper/issues",
+        "rss": "https://github.com/semai-intern-team/package-shipper/releases.atom",
+        "source": "https://github.com/semai-intern-team/package-shipper.git",
+        "wiki": "https://github.com/semai-intern-team/package-shipper/wiki"
+    },
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-mockery": "^0.11",
+        "phpunit/phpunit": "^8",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Semai\\Shipper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Semai\\Shipper\\Test\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "lint": "parallel-lint src tests",
+        "phpcs": "phpcs src tests --standard=psr12 -sp --colors",
+        "phpstan": [
+            "phpstan analyse src -c phpstan.neon --level max --no-progress",
+            "phpstan analyse tests -c phpstan.neon --level 4 --no-progress"
+        ],
+        "phpunit": "phpunit --verbose --colors=always",
+        "phpunit-ci": "phpunit --verbose --coverage-clover build/logs/clover.xml",
+        "phpunit-coverage": "phpunit --verbose --colors=always --coverage-html build/coverage",
+        "test": [
+            "@lint",
+            "@phpcs",
+            "@phpstan",
+            "@phpunit"
+        ],
+        "test-ci": [
+            "@lint",
+            "@phpcs",
+            "@phpstan",
+            "@phpunit-ci"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    }
+}
