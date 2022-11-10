@@ -152,7 +152,7 @@ class ShipperRepository
 		return $result;
 	}
 
-	public function orderDetail(string $orderId, array $params)
+	public function orderDetail($orderId, array $params)
 	{
 		$endpoint = $this->baseUrl().'/v3/order/'.$orderId;
 
