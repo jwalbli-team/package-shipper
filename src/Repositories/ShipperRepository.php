@@ -156,11 +156,8 @@ class ShipperRepository
 	{
 		$endpoint = $this->baseUrl().'/v3/order/'.$orderId;
 
-		$payload = [
-			'query' => $params
-		];
 
-		$result = (new Requestor)->fetchData($endpoint, 'GET', $payload);
+		$result = (new Requestor)->fetchData($endpoint, 'GET');
 
 		return $result;
 	}
