@@ -69,14 +69,14 @@ class Requestor
 
 		$client = new Client(['http_errors' => false, 'handler' => $handlerStack, 'headers' => ['User-Agent' => 'Shipper/']]);
 
-		$res = $client->request($verb, $endpoint, $payload);
+		
 
-		// DEBUG
-		/*
-		foreach ($container as $transaction) {
-			error_log(print_r((string)$transaction['request']->getBody(), TRUE), 3, "./error.log");
+		if (!empty($payload)) {
+		    $res = $client->request($verb, $endpoint, $payload);
+		} else {
+		    $res = $client->request($verb, $endpoint);
 		}
-		*/
+
 
 		$httpStatusCode = $res->getStatusCode();
 
