@@ -18,7 +18,7 @@ class ShipperRepository
 	/** @return string  */
 	protected function baseUrlV1()
 	{
-		return ShipperConfig::$isTest ? 'https://api.sandbox.shipper.id' : 'https://api.shipper.id/prod';
+		return ShipperConfig::$isTest ? 'https://api.sandbox.shipper.id' : 'https://merchant-api.shipper.id/prod';
 	}
 
 	public function countries(array $params = [])
